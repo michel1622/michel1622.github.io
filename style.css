@@ -38,6 +38,11 @@ footer {
     font-size: 20px;
 }
 
+img {
+    width: 20%;
+    border-radius: 10%;
+}
+
 @media (max-width: 700px) {
     nav a {
         display: block;
@@ -51,6 +56,10 @@ footer {
 
     h1 {
         font-size: 20px;
+    }
+
+    img {
+        width: 80%;
     }
 
 }
