@@ -9,30 +9,77 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <h1>Mi primera página web</h1>
-        <p>Bienvenide a mi sitio</p>
+        <p class="subtitulo">Bienvenide a mi sitio</p>
+        <!-- Toggle Switch -->
+        <label id="btn-tema" class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
     </header>
-    <nav>
+
+    <nav class="menu">
         <a href="#sobre-mi">Sobre mi</a>
         <a href="#proyectos">Mis proyectos</a>
+        <a href="#habilidades">Habilidades</a>
         <a href="https://www.google.com">Google</a>
     </nav>
 
-    <section id="sobre-mi">
-        <h2>Sobre mi</h2>
-        <img src="./img/yo-espejo.jpg" alt="Yo">
-        <p>Soy lo que soy</p>
-    </section>
+    <main>
 
-    <section id="proyectos">
-        <h2>Mis proyectos</h2>
-        <img src="./img/shhh.jpg" alt="bar">
-        <p>Estos son los proyectos de ahora</p>
-    </section>
+        <section id="sobre-mi" class="seccion">
+            <h2>Sobre mi</h2>
+            <div class="sobre-mi-contenido">
+                <img src="./img/yo-espejo.jpg" alt="Yo">
+                <div class="texto">
+                    <p>Soy lo que soy, lo cual siempre fluctua</p>
+                    <p>
+                        Trato de siempre ser objetiva.
+                        Trabajo en un 9 a 5.
+                        Descubro placer en aprender.
+                    </p>
+                </div>
+            </div>
 
-    <footer>
-        <p>Mi página web</p>
+        </section>
+
+        <section id="proyectos" class="seccion">
+            <h2>Mis proyectos</h2>
+            <div class="cards">
+
+                <div class="proyecto-card">
+                    <img src="./img/shhh.jpg" alt="bar">
+                    <p>Este es mi último descubrimiento</p>
+                </div>
+
+                <div class="proyecto-card">
+                    <img src="./img/vista.jpg" alt="bar">
+                    <p>Esta es la vista de la oficina de mi nuevo trabajo</p>
+                </div>
+
+                <div class="proyecto-card">
+                    <img src="./img/ebc.jpg" alt="bar">
+                    <p>Esta es la escuela en la que estoy cursando la licenciatura</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="habilidades" class="seccion">
+            <h2>Habilidades</h2>
+            <div class="habilidades-grid">
+                <div class="habilidades">Screening de entidades y transacciones</div>
+                <div class="habilidades">Arquitectura en la nube</div>
+                <div class="habilidades">Python</div>
+                <div class="habilidades">Inglés C1</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Mi página web &copy; 2026 | Michel Ortiz</p>
     </footer>
 
 </body>
