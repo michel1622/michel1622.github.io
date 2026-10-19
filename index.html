@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi primera página web</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <header class="header">
-        <h1>Mi primera página web</h1>
-        <p class="subtitulo">Bienvenide a mi sitio</p>
+        <h1 data-aos="zoom-out" data-aos-duration="1500">Mi primera página web</h1>
+        <p data-aos="zoom-out" data-aos-duration="1500" class="subtitulo">Bienvenide a mi sitio</p>
         <!-- Toggle Switch -->
         <label id="btn-tema" class="switch">
             <input type="checkbox">
@@ -29,8 +30,8 @@
     <main>
 
         <section id="sobre-mi" class="seccion">
-            <h2>Sobre mi</h2>
-            <div class="sobre-mi-contenido">
+            <h2 data-aos="fade-right" data-aos-duration="1500">Sobre mi</h2>
+            <div class="sobre-mi-contenido" data-aos="zoom-in" data-aos-duration="1000">
                 <img src="./img/yo-espejo.jpg" alt="Yo">
                 <div class="texto">
                     <p>Soy lo que soy, lo cual siempre fluctua</p>
@@ -45,20 +46,20 @@
         </section>
 
         <section id="proyectos" class="seccion">
-            <h2>Mis proyectos</h2>
+            <h2 data-aos="fade-left" data-aos-duration="1500">Mis proyectos</h2>
             <div class="cards">
 
-                <div class="proyecto-card">
+                <div class="proyecto-card" data-aos="zoom-in" data-aos-delay="500">
                     <img src="./img/shhh.jpg" alt="bar">
                     <p>Este es mi último descubrimiento</p>
                 </div>
 
-                <div class="proyecto-card">
+                <div class="proyecto-card" data-aos="zoom-in" data-aos-delay="800">
                     <img src="./img/vista.jpg" alt="vista oficina">
                     <p>Esta es la vista de la oficina de mi nuevo trabajo</p>
                 </div>
 
-                <div class="proyecto-card">
+                <div class="proyecto-card" data-aos="zoom-in" data-aos-delay="1100">
                     <img src="./img/ebc.jpg" alt="escuela">
                     <p>Esta es la escuela en la que estoy cursando la licenciatura</p>
                 </div>
@@ -67,13 +68,19 @@
         </section>
 
         <section id="habilidades" class="seccion">
-            <h2>Habilidades</h2>
+            <h2 data-aos="fade-left" data-aos-duration="1500">Habilidades</h2>
             <div class="habilidades-grid">
-                <div class="habilidades">Screening de entidades y transacciones</div>
-                <div class="habilidades">Arquitectura en la nube</div>
-                <div class="habilidades">Python</div>
-                <div class="habilidades">Inglés C1</div>
+                <div class="habilidades" data-aos="fade-up" data-aos-delay="500">Screening de entidades y transacciones
+                </div>
+                <div class="habilidades" data-aos="fade-up" data-aos-delay="700">Arquitectura en la nube</div>
+                <div class="habilidades" data-aos="fade-up" data-aos-delay="900">Python</div>
+                <div class="habilidades" data-aos="fade-up" data-aos-delay="1100">Inglés C1</div>
             </div>
+        </section>
+
+        <section data-aos="fade-up" data-aos-duration="900" class="seccion contador-seccion">
+            <h2 data-aos="fade-left" data-aos-duration="1500" id="numero">0</h2>
+            <button id="btn-contador" type="button">Hacer click</button>
         </section>
 
     </main>
@@ -83,7 +90,10 @@
     </footer>
 
 </body>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <script src="./script.js"></script>
 
 </html>
