@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 
-<html>
-<title>W3.CSS CV Template</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html lang="en">
 
-<style>
-    html,
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: "Roboto", sans-serif
-    }
+<head>
+    <meta charset="UTF-8">
+    <title>Michel Ortiz - CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    .cv-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    @media (min-width:601px) {
-        .cv-grid {
-            grid-template-columns: 1fr 2fr;
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif
         }
-    }
-</style>
+
+        .cv-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        @media (min-width:601px) {
+            .cv-grid {
+                grid-template-columns: 1fr 2fr;
+            }
+        }
+    </style>
+</head>
 
 <body class="w3-light-grey">
+
+    <!-- Botón de idioma -->
+
+    <button id="lang-btn" class="w3-button w3-blue w3-round w3-margin"
+        style="position:fixed; top:0; right:0; z-index:10;" onclick="toggleLang()">ES</button>
 
     <!-- Page Container -->
 
@@ -62,12 +71,14 @@
 
                         <p>
                             <i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-blue"></i>
-                            Compliance analyst
+                            <span data-en="Compliance analyst" data-es="Analista de cumplimiento">Compliance
+                                analyst</span>
                         </p>
 
                         <p>
                             <i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-blue"></i>
-                            Mexico City, Mexico
+                            <span data-en="Mexico City, Mexico" data-es="Ciudad de México, México">Mexico City,
+                                Mexico</span>
                         </p>
 
                         <p>
@@ -85,11 +96,12 @@
                         <p class="w3-large">
                             <b>
                                 <i class="fa fa-asterisk fa-fw w3-margin-right w3-text-blue"></i>
-                                Skills
+                                <span data-en="Skills" data-es="Habilidades">Skills</span>
                             </b>
                         </p>
 
-                        <p>Transactions and entities screening</p>
+                        <p data-en="Transactions and entities screening"
+                            data-es="Monitoreo de transacciones y entidades">Transactions and entities screening</p>
 
                         <div class="w3-light-grey w3-round-xlarge w3-small">
                             <div class="w3-container w3-center w3-round-xlarge w3-blue" style="width:100%">
@@ -97,7 +109,7 @@
                             </div>
                         </div>
 
-                        <p>Major investigations</p>
+                        <p data-en="Major investigations" data-es="Investigaciones complejas">Major investigations</p>
 
                         <div class="w3-light-grey w3-round-xlarge w3-small">
                             <div class="w3-container w3-center w3-round-xlarge w3-blue" style="width:100%">
@@ -105,7 +117,7 @@
                             </div>
                         </div>
 
-                        <p>Cloud architecture</p>
+                        <p data-en="Cloud architecture" data-es="Arquitectura en la nube">Cloud architecture</p>
 
                         <div class="w3-light-grey w3-round-xlarge w3-small">
                             <div class="w3-container w3-center w3-round-xlarge w3-blue" style="width:85%">
@@ -113,7 +125,7 @@
                             </div>
                         </div>
 
-                        <p>Data analysis</p>
+                        <p data-en="Data analysis" data-es="Análisis de datos">Data analysis</p>
 
                         <div class="w3-light-grey w3-round-xlarge w3-small">
                             <div class="w3-container w3-center w3-round-xlarge w3-blue" style="width:80%">
@@ -126,25 +138,25 @@
                         <p class="w3-large">
                             <b>
                                 <i class="fa fa-globe fa-fw w3-margin-right w3-text-blue"></i>
-                                Languages
+                                <span data-en="Languages" data-es="Idiomas">Languages</span>
                             </b>
                         </p>
 
-                        <p>English</p>
+                        <p data-en="English" data-es="Inglés">English</p>
 
                         <div class="w3-light-grey w3-round-xlarge">
                             <div class="w3-round-xlarge w3-blue" style="height:24px;width:100%">
                             </div>
                         </div>
 
-                        <p>Spanish</p>
+                        <p data-en="Spanish" data-es="Español">Spanish</p>
 
                         <div class="w3-light-grey w3-round-xlarge">
                             <div class="w3-round-xlarge w3-blue" style="height:24px;width:100%">
                             </div>
                         </div>
 
-                        <p>Portuguese</p>
+                        <p data-en="Portuguese" data-es="Portugués">Portuguese</p>
 
                         <div class="w3-light-grey w3-round-xlarge">
                             <div class="w3-round-xlarge w3-blue" style="height:24px;width:25%">
@@ -168,47 +180,57 @@
 
                     <h2 class="w3-text-grey w3-padding-16">
                         <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>
-                        Work Experience
+                        <span data-en="Work Experience" data-es="Experiencia laboral">Work Experience</span>
                     </h2>
 
                     <div class="w3-container">
 
                         <h5 class="w3-opacity">
-                            <b>Revolut - Fincrime Analyst</b>
+                            <b><span data-en="Revolut - Fincrime Analyst"
+                                    data-es="Revolut - Analista de Crimen Financiero">Revolut - Fincrime
+                                    Analyst</span></b>
                         </h5>
 
                         <h6 class="w3-text-blue">
                             <i class="fa fa-calendar fa-fw w3-margin-right"></i>
-                            Aprl 2025 -
-                            <span class="w3-tag w3-blue w3-round">Current</span>
+                            <span data-en="April 2025 -" data-es="Abril 2025 -">April 2025 -</span>
+                            <span class="w3-tag w3-blue w3-round" data-en="Current" data-es="Actual">Current</span>
                         </h6>
 
-                        <p>
+                        <p data-en="Review approximately 70 system-generated alerts per day, classifying sanctions, PEP, and adverse media hits using a risk-based approach with detailed documentation for each determination."
+                            data-es="Reviso aproximadamente 70 alertas generadas por el sistema al día, clasificando coincidencias de sanciones, PEP y medios adversos con un enfoque basado en riesgo y documentación detallada de cada determinación.">
                             Review approximately 70 system-generated alerts per day, classifying sanctions, PEP, and
                             adverse media hits using a risk-based approach with detailed documentation for each
                             determination.
                         </p>
 
-                        <p>
+                        <p data-en="Build customer risk profiles through transactional and behavioral analysis, identifying patterns consistent with fraudulent activity or financial crime exposure and escalating high-risk cases."
+                            data-es="Construyo perfiles de riesgo de clientes mediante análisis transaccional y de comportamiento, identificando patrones consistentes con actividad fraudulenta o exposición a delitos financieros y escalando los casos de alto riesgo.">
                             Build customer risk profiles through transactional and behavioral analysis, identifying
                             patterns consistent with fraudulent activity or financial crime exposure and escalating
                             high-risk cases.
                         </p>
-                        <p>
+
+                        <p data-en="Proactively identified screening gaps and proposed rule changes that were implemented, resulting in a measurable reduction in false positives and improved decisioning accuracy across the team."
+                            data-es="Identifiqué de forma proactiva brechas en el monitoreo y propuse cambios de reglas que fueron implementados, logrando una reducción medible de falsos positivos y una mayor precisión en las decisiones del equipo.">
                             Proactively identified screening gaps and proposed rule changes that were implemented,
                             resulting in a measurable reduction in false positives and improved decisioning accuracy
                             across the team.
                         </p>
-                        <p>
+
+                        <p data-en="One of the first analysts on the Mexico team. Localized global compliance workflows to Mexican regulatory requirements, wrote procedural documentation, and helped shape the team's operations from the ground up."
+                            data-es="Parte del grupo inicial de analistas del equipo de México. Adapté los flujos de cumplimiento globales a los requisitos regulatorios mexicanos, redacté documentación de procedimientos y ayudé a dar forma a la operación del equipo desde cero.">
                             One of the first analysts on the Mexico team. Localized global compliance workflows to
                             Mexican regulatory requirements, wrote procedural documentation, and helped shape the team's
                             operations from the ground up.
                         </p>
-                        <p>
+
+                        <p data-en="Supported Legal Affairs with due diligence screening on third-party vendors in Mexico, maintaining accurate investigation logs and compliance registers."
+                            data-es="Apoyé al departamento de Asuntos Legales con la debida diligencia sobre proveedores externos en México, manteniendo registros de investigación y de cumplimiento precisos.">
                             Supported Legal Affairs with due diligence screening on third-party vendors in Mexico,
                             maintaining accurate investigation logs and compliance registers.
-
                         </p>
+
                         <hr>
 
                     </div>
@@ -216,26 +238,32 @@
                     <div class="w3-container">
 
                         <h5 class="w3-opacity">
-                            <b>American Express - Fraud Prevention Analyst</b>
+                            <b><span data-en="American Express - Fraud Prevention Analyst"
+                                    data-es="American Express - Analista de Prevención de Fraude">American Express -
+                                    Fraud Prevention Analyst</span></b>
                         </h5>
 
                         <h6 class="w3-text-blue">
                             <i class="fa fa-calendar fa-fw w3-margin-right"></i>
-                            February 2024 - April 2025
+                            <span data-en="February 2024 - April 2025" data-es="Febrero 2024 - Abril 2025">February 2024
+                                - April 2025</span>
                         </h6>
 
-                        <p>
+                        <p data-en="Performed KYC/CDD on premium credit card accounts, including international document analysis, identity validation, and source of funds assessment to distinguish genuine from fraudulent activity."
+                            data-es="Realicé KYC/CDD en cuentas de tarjetas de crédito premium, incluyendo análisis de documentos internacionales, validación de identidad y evaluación del origen de fondos para distinguir la actividad legítima de la fraudulenta.">
                             Performed KYC/CDD on premium credit card accounts, including international document
                             analysis, identity validation, and source of funds assessment to distinguish genuine from
                             fraudulent activity.
                         </p>
 
-                        <p>
+                        <p data-en="Investigated first-party and third-party fraud through transactional analysis, engaging directly with fraudsters on live calls to contain account exposure in real time."
+                            data-es="Investigué fraude de primera y tercera parte mediante análisis transaccional, interactuando directamente con defraudadores en llamadas en vivo para contener la exposición de la cuenta en tiempo real.">
                             Investigated first-party and third-party fraud through transactional analysis, engaging
                             directly with fraudsters on live calls to contain account exposure in real time.
                         </p>
 
-                        <p>
+                        <p data-en="Achieved an average case resolution time of 6 minutes and 99% customer satisfaction rate over 6 months, balancing investigative rigor with clear customer communication."
+                            data-es="Logré un tiempo promedio de resolución de casos de 6 minutos y una tasa de satisfacción del cliente del 99% durante 6 meses, equilibrando el rigor investigativo con una comunicación clara con el cliente.">
                             Achieved an average case resolution time of 6 minutes and 99% customer satisfaction rate
                             over 6 months, balancing investigative rigor with clear customer communication.
                         </p>
@@ -247,15 +275,19 @@
                     <div class="w3-container">
 
                         <h5 class="w3-opacity">
-                            <b>Westlake financial - Collections analyst</b>
+                            <b><span data-en="Westlake financial - Collections analyst"
+                                    data-es="Westlake financial - Analista de cobranza">Westlake financial - Collections
+                                    analyst</span></b>
                         </h5>
 
                         <h6 class="w3-text-blue">
                             <i class="fa fa-calendar fa-fw w3-margin-right"></i>
-                            January 2023 - February 2024
+                            <span data-en="January 2023 - February 2024" data-es="Enero 2023 - Febrero 2024">January
+                                2023 - February 2024</span>
                         </h6>
 
-                        <p>
+                        <p data-en="Specialized in charged-off portfolios, achieving a 60% recovery rate on total charged-off balance through negotiated settlements, with full regulatory compliance in credit bureau reporting."
+                            data-es="Me especialicé en carteras vencidas, logrando una tasa de recuperación del 60% sobre el saldo total mediante acuerdos de pago negociados, con pleno cumplimiento regulatorio en el reporte a buró de crédito.">
                             Specialized in charged-off portfolios, achieving a 60% recovery rate on total charged-off
                             balance through negotiated settlements, with full regulatory compliance in credit bureau
                             reporting.
@@ -273,7 +305,7 @@
 
                     <h2 class="w3-text-grey w3-padding-16">
                         <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>
-                        Education
+                        <span data-en="Education" data-es="Educación">Education</span>
                     </h2>
 
                     <div class="w3-container">
@@ -284,11 +316,13 @@
 
                         <h6 class="w3-text-blue">
                             <i class="fa fa-calendar fa-fw w3-margin-right"></i>
-                            June 2025 - June 2028
+                            <span data-en="June 2025 - June 2028" data-es="Junio 2025 - Junio 2028">June 2025 - June
+                                2028</span>
                         </h6>
 
-                        <p>
-                            B.S. in Programming & Digital Transformation
+                        <p data-en="B.S. in Programming &amp; Digital Transformation"
+                            data-es="Licenciatura en Programación y Transformación Digital">
+                            B.S. in Programming &amp; Digital Transformation
                         </p>
 
                         <hr>
@@ -298,15 +332,19 @@
                     <div class="w3-container">
 
                         <h5 class="w3-opacity">
-                            <b>Mexican Banking Association (ABM)</b>
+                            <b><span data-en="Mexican Banking Association (ABM)"
+                                    data-es="Asociación de Bancos de México (ABM)">Mexican Banking Association
+                                    (ABM)</span></b>
                         </h5>
 
                         <h6 class="w3-text-blue">
                             <i class="fa fa-calendar fa-fw w3-margin-right"></i>
-                            November 2025
+                            <span data-en="November 2025" data-es="Noviembre 2025">November 2025</span>
                         </h6>
 
-                        <p>AML/CFT Prevention. Specialized Level 7.1</p>
+                        <p data-en="AML/CFT Prevention. Specialized Level 7.1"
+                            data-es="Prevención de PLD/FT. Especializado Nivel 7.1">AML/CFT Prevention. Specialized
+                            Level 7.1</p>
 
                         <hr>
 
@@ -320,10 +358,11 @@
 
                         <h6 class="w3-text-blue">
                             <i class="fa fa-calendar fa-fw w3-margin-right"></i>
-                            July 2026
+                            <span data-en="July 2026" data-es="Julio 2026">July 2026</span>
                         </h6>
 
-                        <p>AWS Academy. Cloud Foundations</p>
+                        <p data-en="AWS Academy. Cloud Foundations" data-es="AWS Academy. Fundamentos de la nube">AWS
+                            Academy. Cloud Foundations</p>
 
                         <br>
 
@@ -343,7 +382,7 @@
 
     <footer class="w3-container w3-blue w3-center w3-margin-top">
 
-        <p>Find me on social media.</p>
+        <p data-en="Find me on social media." data-es="Encuéntrame en redes sociales.">Find me on social media.</p>
 
         <a href="https://github.com/michel1622/" target="_blank" style="color:inherit;">
             <i class="fa fa-github w3-xxlarge w3-hover-opacity"></i>
@@ -351,15 +390,24 @@
         <a href="https://www.linkedin.com/in/michel-ortiz-2a2595205" target="_blank" style="color:inherit;">
             <i class="fa fa-linkedin w3-xxlarge w3-hover-opacity"></i>
         </a>
-        <!--
-        <p>
-            Powered by
-            <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">
-                w3.css
-            </a>
-        </p>
-    -->
     </footer>
+
+    <!-- Language switch -->
+
+    <script>
+        let lang = "en";
+
+        function toggleLang() {
+            lang = (lang === "en") ? "es" : "en";
+
+            document.querySelectorAll("[data-en]").forEach(el => {
+                el.textContent = el.dataset[lang];
+            });
+
+            document.documentElement.lang = lang;
+            document.getElementById("lang-btn").textContent = (lang === "en") ? "ES" : "EN";
+        }
+    </script>
 
 </body>
 
